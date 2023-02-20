@@ -16,7 +16,7 @@ public class Loan implements Serializable {
     private double LoanAmount;
     private String LoanStatus;
     private float IntrestRate;
-    private String Collaterals;
+    private String Collaterals;   
 
     @ManyToOne
     Account account;
