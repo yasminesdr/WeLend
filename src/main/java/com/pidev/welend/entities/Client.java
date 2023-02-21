@@ -25,7 +25,6 @@ public class Client implements Serializable {
     private String employement;
     private Float income;
     private Float expenses;
-    private String userRole;
     private String pwd;
     private Integer score;
 
@@ -35,5 +34,7 @@ public class Client implements Serializable {
     private Set<Reclaim> reclaims;
 @OneToMany(cascade = CascadeType.ALL,mappedBy = "client")
     private Set<Account> accounts;
+@OneToMany(cascade = CascadeType.ALL,mappedBy = "client")
+    private  Set<Consultation> consultations;
 
 }
