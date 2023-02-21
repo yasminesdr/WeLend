@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table( name = "Client")
@@ -30,4 +31,9 @@ public class Client implements Serializable {
 
 @Enumerated(EnumType.STRING)
     private statusLog statuslog;
+@OneToMany(cascade = CascadeType.ALL,mappedBy = "client")
+    private Set<Reclaim> reclaims;
+@OneToMany(cascade = CascadeType.ALL,mappedBy = "client")
+    private Set<Account> accounts;
+
 }

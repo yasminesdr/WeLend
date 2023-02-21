@@ -18,4 +18,5 @@ public class Reclaim implements Serializable {
     private ReclaimStatus reclaimstatus;
     @Enumerated(EnumType.STRING)
     private reclaimType reclaimType;
+    @ManyToOne Client client;
 }

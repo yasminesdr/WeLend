@@ -23,6 +23,7 @@ public class Account implements Serializable {
     private Set<Transaction> transactions;
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "insurance")
     private Set<insurance> insurances;
+    @ManyToOne Client client;
 
 
 
