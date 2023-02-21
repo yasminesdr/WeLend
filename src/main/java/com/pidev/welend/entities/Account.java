@@ -24,6 +24,8 @@ public class Account implements Serializable {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
     private Set<insurance> insurances;
     @ManyToOne Client client;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
+    private Set<Notification> notifications;
 
 
 
