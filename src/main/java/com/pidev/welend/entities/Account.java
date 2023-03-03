@@ -21,10 +21,11 @@ public class Account implements Serializable {
     private float credit ;
     @OneToMany(cascade=CascadeType.ALL,mappedBy = "account")//esm lattribut moush lclass
     private Set<Transaction> transactions;
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "insurance")
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
     private Set<insurance> insurances;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="account")
-    private Set<Loan> Loans;
+    @ManyToOne Client client;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "account")
+    private Set<Notification> notifications;
 
 
 
