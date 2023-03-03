@@ -25,6 +25,7 @@ public class InsuranceTransactionServiceImp implements InsuranceTransactionServi
 
     @Override
     public List<insuranceTransaction> getAllInsuranceTransaction() {
+
         return insuranceTransactionRepo.findAll();
     }
 
